@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="candidate_name">{{candidateInfo.candidate.firstName}} {{candidateInfo.candidate.lastName}}</h1> 
+  <h1 class="candidate_position"> |  {{candidateInfo.position.title}}</h1>
+  <div><em>{{candidateInfo.position.description}}</em></div>
+  <br>
+  <div style="padding-bottom: 20px;">
+  	<div style="display: inline-block; font-family: 'roboto condensed', sans-serif; font-size: 14px;">Interviews scheduled:</div>
+		<div style="display: inline;" ng-if="candidateInfo.interviews.length > 0">
+			<div ng-repeat="interview in candidateInfo.interviews" style="display: inline-block; padding-left: 5px;">
+				<a ng-href="/interview/{{candidateInfo.round._id}}/{{interview._id}}" class="btn interview_button">{{interview.name}}</a>
+			</div>
+		</div>
+		<div style="display: inline;" ng-if="candidateInfo.interviews.length === 0">
+			<em>No interviews scheduled</em>
+		</div>
+	</div>
+
+<!--   <a ng-href="#" class="btn btn-default">linkedin</a>
+  <a ng-href="#" class="btn btn-default">Uploaded Resume</a> -->
+</div>

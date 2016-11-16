@@ -1,0 +1,23 @@
+  <form ng-submit="newPositionForm.submitPosition()">
+    <input class="form-control roundup_text_field" style="width: 300px" type="text" placeholder="Enter Job Title" ng-model="newPositionForm.newPosition.jobTitle">
+    <input class="form-control roundup_text_field" type="text" style="width: 95%" placeholder="Enter Job Description" ng-model="newPositionForm.newPosition.description">
+    <div style="margin-top: 20px;">Set default interview questions for this position:</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <select ng-options="q.question for q in newPositionForm.questions" ng-model="q1" style="font-size: 16px; width: 400px;" class="roundup_text_field">
+            </select><br>
+            <select ng-options="q.question for q in newPositionForm.questions" ng-model="q2" style="font-size: 16px; width: 400px;" class="roundup_text_field">
+            </select><br>
+            <select ng-options="q.question for q in newPositionForm.questions" ng-model="q3" style="font-size: 16px; width: 400px" class="roundup_text_field">
+            </select><br>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <select ng-options="q.question for q in newPositionForm.questions" ng-model="q4" style="font-size: 16px; width: 400px" class="roundup_text_field">
+            </select><br>
+            <select ng-options="q.question for q in newPositionForm.questions" ng-model="q5" style="font-size: 16px; width: 400px" class="roundup_text_field">
+            </select><br>
+        </div>
+    </div>
+    <br>
+    <input type="submit" class="roundup_button orange_button btn">
+  </form>

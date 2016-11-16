@@ -1,0 +1,16 @@
+<h3>Setup Round: Position</h3>
+
+<form ng-submit="setupRoundPosition.editRound()">
+	<select ng-model="setupRoundPosition.selectedPosition">
+		<option selected disabled value="none">Select Position</option>
+		<option ng-repeat="position in setupRoundPosition.positions"
+				name="{{position}}" id="{{position}}"
+				value="{{position._id}}">
+			{{position.title}}, {{position.description}}
+		</option>
+		<input type="submit" value="next/create">
+	</select>
+</form>
+
+
+positions: {{setupRoundPositions.positions}}

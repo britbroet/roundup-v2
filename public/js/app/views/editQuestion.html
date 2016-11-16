@@ -1,0 +1,15 @@
+<h3>Edit Question Information</h3>
+
+<a href="/questions"><span class="glyphicon glyphicon-arrow-left"></span> Back to Questions</a>
+<br>
+<br>
+  <div>
+    <form ng-submit="updateQuestion()">
+      Question Number (no duplicates)<br>
+      <input type="text" style="width: 65px;" class="form-control" ng-model="question.simpleId">
+      Question<br>
+      <input type="text" style="width: 90%" class="form-control" ng-model="question.question">
+      <br>
+      <button type="submit">Confirm Change</button>
+    </form>
+  </div>

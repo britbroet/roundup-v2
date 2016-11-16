@@ -1,0 +1,60 @@
+<div class="container">
+	<h3 class="view_title">Edit Interview Round</h3>
+
+		<form ng-submit="updateRound()">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<h4 class="edit_form_section_header">Candidate Info</h4>
+						<div class="edit_field_label">
+							First name: <input type="text" class="form-control" ng-model="round.candidate.firstName">
+						</div>
+						<div class="edit_field_label">
+			  			Last name: <input type="text" class="form-control" ng-model="round.candidate.lastName">
+			  		</div>
+			  		<div class="edit_field_label">
+			  			LinkedIn Profile: <input type="text" class="form-control" ng-model="round.candidate.linkedIn">
+			  		</div><br>
+		  	</div>
+		  	<div class="col-xs-12 col-sm-6">
+		  	<h4 class="edit_form_section_header">Position Info</h4>
+					<div class="edit_field_label">Position Title:</div>
+					<input class="form-control" type="text" ng-model="round.position.title">
+		  		<div class="edit_field_label">Position Description:</div>
+		  		<input class="form-control" type="text" ng-model="round.position.description"><br>
+		  	</div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-xs-12">
+		  		<div class="edit_form_section_header">
+		  			Interview Questions:
+		  		</div>
+						<div ng-repeat="question in round.questions track by $index">
+		  				<input class="form-control roundup_text_field" ng-model="question.question">
+		  			</div>
+		  	</div>
+		  </div>
+		  
+			  <div class="edit_button_container">
+			  	<div class="submit_cancel">
+				  	<input type="submit" class="roundup_button blue_button btn" value="Submit Changes">
+				  	<a href="/review/{{round._id}}" style="color: #444;"><button class="roundup_button btn cancel_button">Cancel</button></a>
+				  </div>
+				</div>
+		</form>
+		<br>
+	<hr>
+
+	Interviews Scheduled:
+	<div ng-repeat="interview in round.interviews" class="btn btn-default" style="margin: 10px;">
+		{{interview.name}}
+	</div>
+
+	<h3>Add Interview Question </h3>
+	<form ng-submit="addQuestionToRound()">
+	 <input type="text" placeholder="Enter question" ng-model="newQuestion">
+	 <input type="submit">
+	</form>
+	<hr>
+		<button ng-click="showConfirm($event, round)" style="font-size: 13px; color: red">DELETE THIS ROUND</button><br><br>
+
+</div>

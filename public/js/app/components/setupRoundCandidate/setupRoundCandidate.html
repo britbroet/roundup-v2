@@ -1,0 +1,32 @@
+<h3>Setup Round: Candidate</h3>
+
+<form ng-submit="setupRoundCandidate.createRound()">
+	<select ng-model="setupRoundCandidate.selectedCandidate">
+		<option selected disabled value="none">Select Candidate</option>
+		<option ng-repeat="candidate in setupRoundCandidate.candidates"
+				name="{{candidate}}" id="{{candidate}}"
+				value="{{candidate._id}}">
+			{{candidate.lastName}}, {{candidate.firstName}}
+		</option>
+		<input type="submit" value="next/create">
+	</select>
+</form>
+
+
+candidates: {{setupRoundCandidate.candidates[0]}}
+
+
+<!-- <div class="component">
+<em>components > newRoundForm > newRoundForm.html</em>
+
+	<form ng-submit="newRoundForm.submitRound()">
+	  <input type="text" placeholder="First Name" ng-model="newRoundForm.newRound.candidate.firstName">
+	  <input type="text" placeholder="Last Name" ng-model="newRoundForm.newRound.candidate.lastName">
+
+	  <input type="text" placeholder="Position Title" ng-model="newRoundForm.newRound.position.title">
+	  <input type="text" placeholder="Position Description" ng-model="newRoundForm.newRound.position.description">
+
+	  <input type="submit">
+	</form>
+
+</div> -->

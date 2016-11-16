@@ -1,0 +1,28 @@
+{
+  "name": "round-up",
+  "version": "1.0.0",
+  "description": "Track Interview Rounds!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/britbroet/round-up.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/britbroet/round-up/issues"
+  },
+  "homepage": "https://github.com/britbroet/round-up#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0"
+  }
+}

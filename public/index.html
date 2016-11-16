@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="Roundup">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>RoundUp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css">
+    <link rel="stylesheet" href="https://material.angularjs.org/1.1.1/docs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="//code.jquery.com/jquery.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap-tpls.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+    <script src="js/app/app.js"></script>
+    <script src="js/app/controllers.js"></script>
+    <script src="js/app/services/services.js"></script>
+    <script src="js/app/services/authFactory.js"></script>
+    <script src="js/app/components/userSignupForm/userSignupForm.js"></script>
+    <script src="js/app/components/userLoginForm/userLoginForm.js"></script>
+    <script src="js/app/components/navBar/navbar.js"></script>
+    <script src="js/app/components/candidateInfo/candidateInfo.js"></script>
+    <script src="js/app/components/interviewRubric/interviewRubric.js"></script>
+    <script src="js/app/components/newCandidateForm/newCandidateForm.js"></script>
+    <script src="js/app/components/userList/userList.js"></script>
+    <script src="js/app/components/candidateList/candidateList.js"></script>
+    <script src="js/app/components/questionList/questionList.js"></script>
+    <script src="js/app/components/newQuestionForm/newQuestionForm.js"></script>
+    <script src="js/app/components/positionList/positionList.js"></script>
+    <script src="js/app/components/newPositionForm/newPositionForm.js"></script>
+    <script src="js/app/components/newRoundForm/newRoundForm.js"></script>
+    <script src="js/app/components/roundList/roundList.js"></script>
+    <script src="js/app/components/setupRoundCandidate/setupRoundCandidate.js"></script>
+    <script src="js/app/components/setupRoundPosition/setupRoundPosition.js"></script>
+    <script src="js/app/components/resourcesList/resourcesList.js"></script>
+
+    
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+    <div class="old_container">
+        <div ng-include="'js/app/views/alerts.html'"></div>
+      <div ui-view>
+      </div>
+    </div>
+  </body>
+  
+</html>

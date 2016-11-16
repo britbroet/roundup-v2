@@ -1,0 +1,39 @@
+
+
+	<div class="search_filter">
+		<form>
+			Filter by candidate or position info: <input class="search_filter_input" ng-model="query" type="text" placeholder="ex: 'Bob', 'Dole', 'manager', 'fly plans', etc." autofocus>
+		</form>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<div ng-repeat="round in roundList.rounds | filter: query" class="col-sm-6 col-md-4" style="margin: 0 auto;">
+			<div class="list_item">
+				<div>
+					<a ng-href="review/{{round._id}}">
+			  			<strong>{{round.candidate.firstName}} {{round.candidate.lastName}}</strong> | {{round.position.title}}
+			  		</a>
+			  	</div>
+			  		
+			  	<div class="list_position_desc">{{round.position.description}}</div>
+
+				<h5>Interview Candidate:</h5>
+				<div ng-if="round.interviews.length > 0">
+					<div ng-repeat="interview in round.interviews" style="display: inline-block;">
+						<a ng-href="interview/{{$parent.$parent.round._id}}/{{interview._id}}" class="btn interview_button">{{interview.name}}</a>
+					</div>
+				</div>
+				<div ng-if="round.interviews.length === 0">
+					<em style="font-size: 14px; color: #777;">No interviews scheduled</em>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+

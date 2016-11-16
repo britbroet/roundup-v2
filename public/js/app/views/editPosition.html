@@ -1,0 +1,21 @@
+<div class="container">
+
+  <a href="/positions"><span class="glyphicon glyphicon-arrow-left"></span> Back to Positions</a>
+
+  <h3 class="view_title">Edit Position</h3>
+
+    <form ng-submit="updatePosition()">
+      Job Title<br>
+      <input style="width: 300px" class="form-control" type="text" ng-model="position.jobTitle">
+      Description<br>
+      <input class="form-control" type="text" style="width: 95%" style="width: 380px" ng-model="position.description">
+      <h5>Default Interview Questions for this position</h5>
+        <div ng-repeat="question in position.questions track by $index">
+          <input class="form-control" ng-model="question" style="width: 95%">
+          <br>
+        </div>
+
+      <input type="submit">
+    </form>
+
+</div>
