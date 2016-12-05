@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/britbroet/round-up.git"
+    "url": "git+https://github.com/britbroet/roundup-v2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/britbroet/round-up/issues"
+    "url": "https://github.com/britbroet/roundup-v2/issues"
   },
-  "homepage": "https://github.com/britbroet/round-up#readme",
+  "homepage": "https://github.com/britbroet/roundup-v2#readme",
   "dependencies": {
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
