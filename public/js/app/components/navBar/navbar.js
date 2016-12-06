@@ -1,7 +1,7 @@
 (function() {
   angular.module('Roundup')
   .component('navBar', {
-    templateUrl: 'js/app/components/navbar/navbar.html',
+    templateUrl: 'js/app/components/navBar/navBar.html',
     controller: NavBar,
     controllerAs: 'navBar'
   });
@@ -28,11 +28,11 @@
 
     navBar.logout = function() {
       console.log("logged out");
-    Auth.removeToken();
-    console.log('My token:', Auth.getToken());
-    Alerts.add('success', 'Logged out!');
-    navBar.loggedIn = false;
-    $state.reload();
+      Auth.removeToken();
+      console.log('My token:', Auth.getToken());
+      Alerts.add('success', 'Logged out!');
+      navBar.loggedIn = false;
+      $state.reload();
   	}
   }
 
