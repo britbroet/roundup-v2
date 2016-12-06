@@ -9,7 +9,7 @@ var User = require('./models/user');
 var secret = "mysupersecretpassword";
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/roundup-v2');
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/roundup');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
