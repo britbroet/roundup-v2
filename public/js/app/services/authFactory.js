@@ -1,6 +1,6 @@
 angular.module('Roundup')
-.factory('Auth', ['$window', function($window) {
 
+.factory('Auth', ['$window', function($window) {
   return {
     saveToken: function(token) {
       $window.localStorage['secret-token'] = token;
@@ -28,14 +28,15 @@ angular.module('Roundup')
           var payload = JSON.parse($window.atob(token.split('.')[1]));
           var payload = payload;
           console.log('the pay load', payload);
-          return payload
-        } catch(err) {
+          return payload;
+        } 
+        catch(err) {
           return false;
-        }
-      }
-    }
-  }
-}])
+        } // end of catch
+      } // end of if
+    } // end of currentUser
+  } // end of return
+}]) // end of auth factory
 
 .factory('Alerts', [function() {
   var alerts = [];
@@ -70,4 +71,4 @@ angular.module('Roundup')
       return config;
     }
   }
-}])
+}]);
