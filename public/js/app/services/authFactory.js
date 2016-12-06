@@ -1,5 +1,6 @@
 angular.module('Roundup')
 .factory('Auth', ['$window', function($window) {
+
   return {
     saveToken: function(token) {
       $window.localStorage['secret-token'] = token;
@@ -21,7 +22,7 @@ angular.module('Roundup')
     currentUser: function() {
       console.log("currentUser()")
       if (this.isLoggedIn()) {
-        console.log("user is logged in")
+        console.log("user is logged in");
         var token = this.getToken();
         try {
           var payload = JSON.parse($window.atob(token.split('.')[1]));
