@@ -1,5 +1,4 @@
 angular.module('Roundup')
-
 .factory('Auth', ['$window', function($window) {
   return {
     saveToken: function(token) {
@@ -20,26 +19,22 @@ angular.module('Roundup')
     },
     // {{WhateverCtrl.Auth.currentUser()._doc.email}}
     currentUser: function() {
-      console.log("currentUser()");
+      console.log("currentUser()")
       if (this.isLoggedIn()) {
-        console.log("user is logged in");
+        console.log("user is logged in")
         var token = this.getToken();
-        //try {
+        try {
           var payload = JSON.parse($window.atob(token.split('.')[1]));
-          //var payload = payload;
+          var payload = payload;
           console.log('the pay load', payload);
-          return payload;
-        //} 
-        //catch(err) {
-          //return false;
-        //} // end of catch
-      } // end of if
-      else {
-        return false;
+          return payload
+        } catch(err) {
+          return false;
+        }
       }
-    } // end of currentUser
-  } // end of return
-}]) // end of auth factory
+    }
+  }
+}])
 
 .factory('Alerts', [function() {
   var alerts = [];
@@ -74,4 +69,4 @@ angular.module('Roundup')
       return config;
     }
   }
-}]);
+}])
