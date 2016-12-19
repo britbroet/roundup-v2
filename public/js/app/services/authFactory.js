@@ -9,12 +9,11 @@ angular.module('Roundup')
     },
     removeToken: function() {
       $window.localStorage.removeItem('secret-token');
-
     },
     isLoggedIn: function() {
       var token = this.getToken();
       var result = token ? true : false;
-      // console.log("is logged in?", result);
+      console.log("is logged in?", result);
       return result;
     },
     // {{WhateverCtrl.Auth.currentUser()._doc.email}}
@@ -38,7 +37,6 @@ angular.module('Roundup')
 
 .factory('Alerts', [function() {
   var alerts = [];
-
   return {
     clear: function() {
       alerts = [];
