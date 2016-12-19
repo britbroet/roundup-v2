@@ -7,11 +7,12 @@
   });
 
 
-  function NavBar($http, $state, $location, $rootScope, Auth, Alerts) {
+  function NavBar($http, $rootScope, $state, $location, Auth, Alerts) {
     var navBar = this;
     navBar.Auth = Auth;
     navBar.userData = {};
-    navBar.loggedIn = false;
+    //navBar.loggedIn = false;
+    navBar.loggedIn;
 
     // ACCESS USER DATA
     //var payload = Auth.currentUser();
@@ -25,6 +26,9 @@
       console.log('payload doc', navBar.loggedIn);
       console.log('user data', navBar.userData);
     }
+    else {
+      navBar.loggedIn = false;
+    }
 
     navBar.logout = function() {
       console.log("logged out");
@@ -36,6 +40,6 @@
   	}
   }
 
-  NavBar.$inject = ['$http', '$state', '$location', '$rootScope', 'Auth', 'Alerts'];
+  NavBar.$inject = ['$http', '$rootScope', '$state', '$location', 'Auth', 'Alerts'];
 })()
 
