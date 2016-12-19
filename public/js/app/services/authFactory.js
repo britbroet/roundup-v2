@@ -20,14 +20,15 @@ angular.module('Roundup')
     currentUser: function() {
       console.log("currentUser()")
       if (this.isLoggedIn()) {
-        console.log("user is logged in")
+        console.log("user is logged in");
         var token = this.getToken();
         try {
           var payload = JSON.parse($window.atob(token.split('.')[1]));
           var payload = payload;
           console.log('the pay load', payload);
-          return payload
+          return payload;
         } catch(err) {
+          console.log('caught error in payload');
           return false;
         }
       }
