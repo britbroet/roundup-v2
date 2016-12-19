@@ -24,7 +24,7 @@ angular.module('Roundup')
         var token = this.getToken();
         try {
           var payload = JSON.parse($window.atob(token.split('.')[1]));
-          var payload = payload;
+          //var payload = payload;
           console.log('the pay load', payload);
           return payload;
         } catch(err) {
