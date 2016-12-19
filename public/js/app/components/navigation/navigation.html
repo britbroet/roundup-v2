@@ -26,7 +26,7 @@
         <li><a ng-if="navigation.loggedIn === false" href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li>
           <div ng-if="navigation.loggedIn === true" style="font-size: 10px; color: #9d9d9d;">logged in as {{navigation.userData.firstName}}</div>
-        <a ng-if="navigation.loggedIn === true" ng-click="navigation.logout()" href="/" style="padding-top: 3px; padding-bottom: 3px;" >
+        <a ng-click="navigation.logout()" href="/" style="padding-top: 3px; padding-bottom: 3px;" >
         <span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
