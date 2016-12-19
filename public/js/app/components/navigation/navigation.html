@@ -13,7 +13,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a ng-if="navBar.loggedIn" class="dropdown-toggle" data-toggle="dropdown" href="#">Site Navigation<span class="caret"></span></a>
+          <a ng-if="navigation.loggedIn" class="dropdown-toggle" data-toggle="dropdown" href="#">Site Navigation<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/resources">Resources</a></li>
             <li><a href="/positions">Positions</a></li>
@@ -23,10 +23,10 @@
             <li><a href="/rounds">Rounds</a></li>
           </ul>
         </li>
-        <li><a ng-if="!navBar.loggedIn" href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a ng-if="!navigation.loggedIn" href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li>
-          <div ng-if="navBar.loggedIn" style="font-size: 10px; color: #9d9d9d;">logged in as {{navBar.userData.firstName}}</div>
-        <a ng-if="navBar.loggedIn" ng-click="navBar.logout()" href="/" style="padding-top: 3px; padding-bottom: 3px;" >
+          <div ng-if="navigation.loggedIn" style="font-size: 10px; color: #9d9d9d;">logged in as {{navigation.userData.firstName}}</div>
+        <a ng-if="navigation.loggedIn" ng-click="navigation.logout()" href="/" style="padding-top: 3px; padding-bottom: 3px;" >
         <span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
