@@ -24,6 +24,7 @@
         console.log('Auth', Auth.currentUser());
       }, function error(res) {
         Alerts.add('danger', 'Incorrect email/password');
+        console.log('incorrect email pw');
         console.log(res);
       });
       
