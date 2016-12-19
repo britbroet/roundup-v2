@@ -7,7 +7,7 @@
   });
 
 
-  function NavBar($http, $rootScope, $state, $location, Auth, Alerts) {
+  function NavBar($http, $state, $location, Auth, Alerts) {
     var navBar = this;
     navBar.Auth = Auth;
     navBar.userData = {};
@@ -40,6 +40,6 @@
   	}
   }
 
-  NavBar.$inject = ['$http', '$rootScope', '$state', '$location', 'Auth', 'Alerts'];
+  NavBar.$inject = ['$http', '$state', '$location', 'Auth', 'Alerts'];
 })()
 
