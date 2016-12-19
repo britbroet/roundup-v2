@@ -22,6 +22,7 @@ angular.module('Roundup')
       if (this.isLoggedIn()) {
         console.log("user is logged in");
         var token = this.getToken();
+        console.log('token: ', token);
         try {
           var payload = JSON.parse($window.atob(token.split('.')[1]));
           //var payload = payload;
