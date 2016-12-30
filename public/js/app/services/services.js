@@ -13,6 +13,7 @@ angular.module('Roundup')
 
   this.addUser = function(userData, callback) {
     $http.post('/api/users', userData).then(function success(res) {
+      console.log('successfully accessed api user', res);
       callback(res);
     }, function error(res) {
       console.log('error')
