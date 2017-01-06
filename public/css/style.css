@@ -6,6 +6,10 @@ body {
   color: #3e3e3e;
 }
 
+.main_container {
+  margin-bottom: 200px;
+}
+
 h1, h2, h3, h4 {
   font-family: 'roboto condensed', sans-serif;
 }
