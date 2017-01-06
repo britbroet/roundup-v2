@@ -9,15 +9,10 @@
       <a class="navbar-brand" href="/"><img src="/img/lasso-logo.png" class="lasso_logo"><span class="logo_text">RoundUp</span></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-        <div ng-show="!navigation.loggedIn">
-        lalal
-        </div>
-          <a ng-if="navigation.loggedIn === true" class="dropdown-toggle" data-toggle="dropdown" href="#">Site Navigation<span class="caret"></span></a>
-          <ul class="dropdown-menu">
+          <a ng-if="navigation.loggedIn === true" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 2.5rem; margin-top: -2px;" href="#"><span class="glyphicon glyphicon-menu-hamburger"></a>
+          <ul class="dropdown-menu" id="myNavbar">
             <li><a href="/resources">Resources</a></li>
             <li><a href="/positions">Positions</a></li>
             <li><a href="/questions">Questions</a></li>
@@ -28,7 +23,7 @@
         </li>
         <li><a ng-if="navigation.loggedIn === false" href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li>
-          <div ng-if="navigation.loggedIn === true" style="font-size: 10px; color: #9d9d9d;">logged in as {{navigation.userData.firstName}}
+          <div ng-if="navigation.loggedIn === true" style="font-size: 10px; color: #9d9d9d; margin-top: 5px;">logged in as {{navigation.userData.firstName}}</br>
           <a ng-click="navigation.logout()" href="/" style="padding-top: 3px; padding-bottom: 3px;" >
           <span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           </div>
