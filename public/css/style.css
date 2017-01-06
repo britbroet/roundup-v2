@@ -120,6 +120,16 @@ a.back_link {
   color: #fff !important;
 }
 
+.red_button {
+  background-color: #ff0000;
+  color: white;
+}
+
+.red_button:hover {
+  background-color: #b20000;
+  color: #fff !important;
+}
+
 .cancel_button {
   background-color: #fff;
   border: 1px solid #c5c5c5 !important;

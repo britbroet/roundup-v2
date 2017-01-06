@@ -49,12 +49,15 @@
 		{{interview.name}}
 	</div>
 
-	<h3>Add Interview Question </h3>
-	<form ng-submit="addQuestionToRound()">
-	 <input type="text" placeholder="Enter question" ng-model="newQuestion">
-	 <input type="submit">
-	</form>
+	<div style="display: none;">
+		<h3>Add Interview Question </h3>
+		<form ng-submit="addQuestionToRound()">
+		 <input type="text" placeholder="Enter question" ng-model="newQuestion">
+		 <input type="submit" class="roundup_button_sm blue_button btn">
+		</form>
+	</div>
 	<hr>
-		<button ng-click="showConfirm($event, round)" style="font-size: 13px; color: red">DELETE THIS ROUND</button><br><br>
-
+	<div style="text-align: center;">
+		<button ng-click="showConfirm($event, round)" class="roundup_button_sm red_button btn">Delete Round</button><br><br>
+	</div>
 </div>
