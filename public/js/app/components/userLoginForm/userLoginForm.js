@@ -20,7 +20,8 @@
         Alerts.add('success', 'Logged in!');
         $rootScope.$broadcast('loggedIn');
         console.log('Token:', res.data.token);
-        $location.path('/');
+        //$location.path('/');
+        //$state.reload();
         console.log('Auth', Auth.currentUser());
       }, function error(res) {
         Alerts.add('danger', 'Incorrect email/password');

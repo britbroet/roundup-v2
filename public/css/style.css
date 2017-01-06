@@ -1,3 +1,7 @@
+html {
+  background-color: #fff !important;
+}
+
 body {
   color: #3e3e3e;
 }
@@ -322,8 +326,10 @@ a.back_link {
 /* HOMEPAGE */
 
 .homepage_featured {
-/*  height: 400px;
-  width: 100%;*/
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 100%;
   background-image: url('/img/tablebg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -335,8 +341,8 @@ a.back_link {
   display: flex;
   position: relative;
   background:rgba(0,0,0,0.4);
-/*  height: 400px;
-  width: 100%;*/
+  width: 100%;
+  height: 100%;
 }
 
   .homepage_featured_container {
