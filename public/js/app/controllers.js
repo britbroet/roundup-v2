@@ -85,7 +85,7 @@ angular.module('Roundup')
       var thisRound = round;
       var confirm = $mdDialog.confirm()
             .title('Are you sure you want to delete this round?')
-            .textContent('Warning, deleteing is not reversible.')
+            .textContent('Warning, deleting is not reversible.')
             .ariaLabel('Lucky day')
             .targetEvent(ev)
             .ok('Delete Round')
